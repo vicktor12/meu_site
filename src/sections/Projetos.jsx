@@ -1,4 +1,4 @@
-import { ExternalLink, Map, DollarSign, LayoutDashboard } from 'lucide-react'
+import { ExternalLink, Map, DollarSign, LayoutDashboard, Target, Download } from 'lucide-react'
 
 const projetos = [
   {
@@ -30,6 +30,22 @@ const projetos = [
       'Painel de métricas operacionais de suporte integrado à plataforma Umbler — TMA, SLA, volume de tickets e desempenho de atendentes em tempo real.',
     stack: ['HTML5', 'JavaScript', 'CSS3', 'API REST'],
     links: [],
+  },
+  {
+    id: 'apostas',
+    icon: Target,
+    gradient: 'from-sky-900/80 to-sky-700/50',
+    border: 'border-sky-500/30',
+    iconColor: 'text-sky-300',
+    destaque: true,
+    nome: 'Controle de Apostas',
+    tipo: 'Sistema Web + App Android',
+    desc:
+      'Sistema self-hosted de gestão de apostas esportivas: registro de apostas, controle de banca por casa, transferências entre reserva e casas, estatísticas e gráficos de evolução. Em produção.',
+    stack: ['React', 'Node.js', 'PostgreSQL', 'React Native', 'Expo'],
+    links: [
+      { label: 'Baixar APK', icon: Download, href: '/downloads/controle-apostas.apk', primary: true },
+    ],
   },
   {
     id: 'ets2',
