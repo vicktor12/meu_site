@@ -1,4 +1,4 @@
-import { ExternalLink, Map, DollarSign, LayoutDashboard, Target, Download } from 'lucide-react'
+import { ExternalLink, Map, DollarSign, LayoutDashboard, Target } from 'lucide-react'
 
 const projetos = [
   {
@@ -44,7 +44,7 @@ const projetos = [
       'Sistema self-hosted de gestão de apostas esportivas: registro de apostas, controle de banca por casa, transferências entre reserva e casas, estatísticas e gráficos de evolução. Em produção.',
     stack: ['React', 'Node.js', 'PostgreSQL', 'React Native', 'Expo'],
     links: [
-      { label: 'Baixar APK', icon: Download, href: '/downloads/controle-apostas.apk', primary: true },
+      { label: 'Acessar App', icon: ExternalLink, href: 'https://controledeapostas.com.br', primary: true },
     ],
   },
   {
