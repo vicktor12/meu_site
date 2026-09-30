@@ -4,26 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          900: '#0B1E3F',
-          800: '#0F2554',
-          700: '#1E3A8A',
-          500: '#3B82F6',
-          300: '#93C5FD',
-          100: '#DBEAFE',
-        },
-        space: {
-          950: '#010810',
-          900: '#020B18',
-          800: '#051020',
-          700: '#0A1628',
-          600: '#0F1F35',
-        },
+        void: '#03060D',
+        ink: { 900: '#060C18', 800: '#0A1322', 700: '#101B30' },
+        neon: { DEFAULT: '#22E5FF', dim: '#7DEFFF' },
+        volt: '#3B82F6',
+        amber: { signal: '#FFB547' },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
+        display: ['Unbounded', 'Manrope', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    ({ addVariant }) => addVariant('pointer-fine', '@media (pointer: fine)'),
+  ],
 }

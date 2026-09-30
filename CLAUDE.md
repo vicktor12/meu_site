@@ -12,39 +12,20 @@ Site institucional em `brainstech.com.br`. Landing page única apresentando a ma
 
 ```
 src/
-  App.jsx               ← monta as sections em ordem
-  index.css             ← dark bg global (#020B18), font Inter
-  sections/
-    Hero.jsx            ← navbar + badge IA + logo + tagline + CTAs
-    Sobre.jsx           ← quem é Victor, posicionamento IA
-    Servicos.jsx        ← 5 cards de serviços
-    Projetos.jsx        ← catálogo array-driven (adicionar novo = add ao array)
-    Contato.jsx         ← email + WhatsApp (⚠ número placeholder)
-    Footer.jsx          ← copyright + "Desenvolvido com IA"
-public/
-  logo-white.png        ← logo branca fundo transparente (usada no site)
-  favicon64.png         ← favicon ativo (logo branca sobre navy 64x64)
-  Brainstech.png        ← logo original colorida (não usada no site)
+  App.jsx               ← Loader + Cursor + Nav + sections em ordem
+  config.js             ← EMAIL, WHATSAPP (vazio = botão oculto), controle do loader
+  index.css             ← tokens, grain, spotlight, botões, marquee, animações
+  components/           ← NeuralCanvas (cérebro 3D em canvas), Loader, Cursor, ui.jsx (Reveal, Spot, Words, Scramble, Counter, Magnetic)
+  sections/             ← Nav, Hero, Marquee, Diferencial, Briefing (terminal interativo), Processo, Servicos, Projetos, Sobre, Contato, Footer
+public/                 ← logo-white.png (usada), favicon64.png (ativo)
 ```
 
-## Design System
+## Design System — "centro de comando neural"
 
-Tema escuro futurista. Cores customizadas no `tailwind.config.js`:
+Tema escuro futurista. Fontes: **Unbounded** (display), **Manrope** (texto), **JetBrains Mono** (HUD/tags).
+Cores (tailwind.config.js): `void` #03060D (fundo), `ink-900/800` (seções alternadas), `neon` #22E5FF (IA / accent), `volt` #3B82F6, `amber-signal` #FFB547 (decisão humana — simboliza o TI no comando).
 
-| Token | Hex | Uso |
-|-------|-----|-----|
-| `space-950` | `#010810` | Footer bg |
-| `space-900` | `#020B18` | Fundo principal |
-| `space-800` | `#051020` | Seções alternadas (Serviços, Contato) |
-| `brand-500` | `#3B82F6` | Accent azul, botões primários |
-| `brand-300` | `#93C5FD` | Texto secundário, badges |
-
-**Padrões de componente:**
-- Cards: `bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm`
-- Section badge: `bg-brand-500/10 border border-brand-500/20 text-brand-300 rounded-full text-xs uppercase tracking-[0.15em]`
-- Headings: `bg-gradient-to-r from-white to-brand-300 bg-clip-text text-transparent`
-- Tags tech: `font-mono text-[10px] bg-white/5 border border-white/10`
-- Orbs decorativos: `bg-brand-500/8 rounded-full blur-[120px] pointer-events-none`
+Padrões: cards = classe `.spot` (spotlight no mouse) dentro de `<Reveal>`; títulos com `.text-grad` / `.text-shimmer` (não aplicar em pai de elemento com transform/filter — usar `Words`, que passa a classe a cada palavra); CTAs `.btn-solid` e `.btn-beam`. Respeita prefers-reduced-motion.
 
 ## Posicionamento
 
@@ -66,9 +47,8 @@ Array em `src/sections/Projetos.jsx`. Para adicionar novo projeto, inserir objet
 {
   id: 'slug-unico',
   icon: IconeLucide,
-  gradient: 'from-cor-900/80 to-cor-700/50',
-  border: 'border-cor-500/30',
-  iconColor: 'text-cor-300',
+  status: 'Em produção',    // pill do card (live: true = bolinha verde pulsando)
+  hue: '34,229,255',        // cor RGB do card
   destaque: false,           // true = ocupa 2 colunas (md:col-span-2)
   nome: 'Nome do Projeto',
   tipo: 'Tipo / Categoria',
@@ -83,11 +63,11 @@ Array em `src/sections/Projetos.jsx`. Para adicionar novo projeto, inserir objet
 **Projetos atuais:**
 - **Finanças Pessoais** (destaque, 2 colunas) → `https://financas.brainstech.com.br`
 - **Dashboard Umbler** → interno, sem link público
+- **Controle de Apostas** (destaque, 2 colunas) → `https://controledeapostas.com.br`
 - **Waze para ETS2** → mod pessoal, sem link público
 
 ## Pendências
 
-- [ ] **WhatsApp**: substituir `5500000000000` em `src/sections/Contato.jsx` pelo número real (formato `55DDD9XXXXXXXX`)
 - [ ] **Deploy**: git init → push `vicktor12/brainstech-site` → EasyPanel serviço `site` → Cloudflare DNS `brainstech.com.br` → `187.77.53.139`
 
 ## Deploy (quando executar)

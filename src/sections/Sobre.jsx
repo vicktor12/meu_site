@@ -1,75 +1,56 @@
-import { Cpu, Wrench, Lightbulb } from 'lucide-react'
+import { Wrench, Cpu, Lightbulb } from 'lucide-react'
+import { Reveal, SectionTag } from '../components/ui'
 
 const pilares = [
-  {
-    icon: Wrench,
-    titulo: 'Raízes no suporte',
-    texto:
-      'Trabalho com suporte técnico e entendo na prática as dores de quem depende de TI para operar. Cada solução nasceu de um problema real vivido no dia a dia.',
-    accent: 'text-brand-300',
-    iconBg: 'bg-brand-500/10 border-brand-500/20',
-  },
-  {
-    icon: Cpu,
-    titulo: 'IA como ferramenta',
-    texto:
-      'Uso Inteligência Artificial como alavanca de desenvolvimento. Todos os projetos — incluindo este site — foram construídos com IA, combinando visão humana e poder computacional.',
-    accent: 'text-cyan-400',
-    iconBg: 'bg-cyan-500/10 border-cyan-500/20',
-  },
-  {
-    icon: Lightbulb,
-    titulo: 'Solução sob medida',
-    texto:
-      'Não entrego produtos genéricos. Entendo o fluxo, identifico o gargalo e construo exatamente o que vai eliminar o retrabalho do seu time.',
-    accent: 'text-purple-400',
-    iconBg: 'bg-purple-500/10 border-purple-500/20',
-  },
+  { icon: Wrench, t: 'Raízes no suporte', d: 'Vivo o dia a dia de quem depende de TI para operar. Cada solução nasce de um problema real.' },
+  { icon: Cpu, t: 'IA como alavanca', d: 'Uso IA para construir rápido — mas eu decido a arquitetura, reviso e respondo pelo resultado.' },
+  { icon: Lightbulb, t: 'Sob medida', d: 'Sem produto genérico: entendo o fluxo, acho o gargalo e elimino o retrabalho do seu time.' },
 ]
 
 export default function Sobre() {
   return (
-    <section id="sobre" className="py-24 bg-space-900 relative overflow-hidden">
-      {/* dot matrix */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: 'radial-gradient(circle, #93C5FD 1px, transparent 1px)',
-          backgroundSize: '28px 28px',
-        }}
-      />
-      <div className="absolute top-0 right-1/4 w-[450px] h-[450px] bg-brand-500/8 rounded-full blur-[130px] pointer-events-none" />
-
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mb-16">
-          <span className="inline-flex items-center text-brand-300 bg-brand-500/10 border border-brand-500/20 font-semibold text-xs uppercase tracking-[0.15em] px-3 py-1 rounded-full">
-            Sobre
-          </span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold leading-tight bg-gradient-to-r from-white to-brand-300 bg-clip-text text-transparent">
-            Quem está por trás da Brains Tech
-          </h2>
-          <p className="mt-4 text-white/50 text-lg leading-relaxed">
-            Sou Victor, profissional de suporte técnico que usa{' '}
-            <span className="text-brand-300 font-semibold">Inteligência Artificial</span> como ferramenta
-            de desenvolvimento. Não sou um desenvolvedor tradicional — sou alguém que conhece as dores do
-            usuário final e usa IA para transformá-las em software funcional. Todos os projetos que você
-            vê aqui, incluindo este site, foram construídos com o auxílio de IA.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {pilares.map(({ icon: Icon, titulo, texto, accent, iconBg }) => (
-            <div
-              key={titulo}
-              className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/20 hover:bg-white/[0.07] transition-all backdrop-blur-sm"
-            >
-              <div className={`w-12 h-12 rounded-xl border ${iconBg} flex items-center justify-center mb-5`}>
-                <Icon className={`w-6 h-6 ${accent}`} />
-              </div>
-              <h3 className="font-bold text-white text-lg mb-3">{titulo}</h3>
-              <p className="text-white/50 leading-relaxed text-sm">{texto}</p>
+    <section id="sobre" className="relative overflow-hidden bg-ink-900 py-28 md:py-36">
+      <div className="absolute inset-0 grid-bg opacity-60" />
+      <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-6 lg:grid-cols-[0.8fr_1.2fr]">
+        {/* HUD do operador */}
+        <Reveal className="mx-auto">
+          <div className="relative flex h-72 w-72 items-center justify-center md:h-96 md:w-96">
+            <div className="absolute inset-0 rounded-full border border-dashed border-neon/30" style={{ animation: 'rot 40s linear infinite' }} />
+            <div className="absolute inset-6 rounded-full border border-white/10" style={{ animation: 'rotr 28s linear infinite' }}>
+              <i className="absolute -top-1 left-1/2 h-2 w-2 rounded-full bg-neon shadow-[0_0_12px_#22E5FF]" />
+              <i className="absolute -bottom-1 left-1/3 h-2 w-2 rounded-full bg-amber-signal shadow-[0_0_12px_#FFB547]" />
             </div>
-          ))}
+            <div className="absolute inset-16 rounded-full border border-neon/20" style={{ animation: 'rot 18s linear infinite' }}>
+              <i className="absolute right-0 top-1/2 h-2 w-2 rounded-full bg-neon shadow-[0_0_12px_#22E5FF]" />
+            </div>
+            <div className="absolute inset-24 rounded-full bg-neon/10 blur-2xl" />
+            <img src="/logo-white.png" alt="Brains Tech" className="relative h-32 w-32 object-contain md:h-40 md:w-40" style={{ animation: 'float 6s ease-in-out infinite', filter: 'drop-shadow(0 0 28px rgba(34,229,255,.7))' }} />
+            <span className="absolute -bottom-2 rounded-full border border-neon/30 bg-void px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-neon">operador: victor</span>
+          </div>
+        </Reveal>
+
+        <div>
+          <Reveal>
+            <SectionTag n="06">Quem opera</SectionTag>
+            <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.12] tracking-tight text-white md:text-4xl">
+              Um profissional de TI <span className="text-grad">no comando da IA.</span>
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-white/55">
+              Sou Victor. Trabalho com suporte técnico e uso Inteligência Artificial como ferramenta de desenvolvimento. Não escrevo cada linha na mão — e não escondo isso:
+              todos os projetos, <span className="text-white">incluindo este site</span>, foram construídos com IA. O que eu trago é o que a IA não tem: conhecimento de TI, visão do problema do usuário e responsabilidade pelo que vai ao ar.
+            </p>
+          </Reveal>
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {pilares.map(({ icon: Icon, t, d }, i) => (
+              <Reveal key={t} delay={i * 120}>
+                <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                  <Icon size={20} className="text-neon" />
+                  <h3 className="mt-4 font-display text-sm font-semibold text-white">{t}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/45">{d}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
