@@ -5,7 +5,7 @@ import { scrollToId } from '../components/ui'
 const links = [
   ['metodo', 'Método'],
   ['servicos', 'Serviços'],
-  ['projetos', 'Projetos'],
+  ['projetos', 'Portfólio'],
   ['sobre', 'Sobre'],
 ]
 

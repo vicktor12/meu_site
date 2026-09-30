@@ -117,7 +117,7 @@ export default function Projetos() {
       <div className="absolute left-0 top-1/3 h-[500px] w-[500px] rounded-full bg-volt/15 blur-[150px]" />
       <div className="relative mx-auto max-w-6xl px-6">
         <Reveal className="max-w-2xl">
-          <SectionTag n="05">Provas</SectionTag>
+          <SectionTag n="05">Portfólio</SectionTag>
           <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.12] tracking-tight text-white md:text-5xl">
             Sistemas <span className="text-grad">no ar</span>, não slides.
           </h2>

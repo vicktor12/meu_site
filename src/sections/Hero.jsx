@@ -74,8 +74,8 @@ export default function Hero() {
             </button>
           </Magnetic>
           <Magnetic strength={0.2}>
-            <button onClick={() => scrollToId('metodo')} className="btn-beam">
-              <span>Ver como eu penso</span>
+            <button onClick={() => scrollToId('projetos')} className="btn-beam">
+              <span>Ver portfólio</span>
             </button>
           </Magnetic>
         </div>

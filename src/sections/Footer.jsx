@@ -1,6 +1,6 @@
 import { scrollToId } from '../components/ui'
 
-const links = [['metodo', 'Método'], ['servicos', 'Serviços'], ['projetos', 'Projetos'], ['sobre', 'Sobre'], ['contato', 'Contato']]
+const links = [['metodo', 'Método'], ['servicos', 'Serviços'], ['projetos', 'Portfólio'], ['sobre', 'Sobre'], ['contato', 'Contato']]
 
 export default function Footer() {
   return (
