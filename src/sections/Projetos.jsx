@@ -64,7 +64,7 @@ const projetos = [
     tipo: 'Sistema Web + App Android',
     desc: 'Gestão de apostas esportivas: registro, controle de banca por casa, transferências entre reserva e casas, estatísticas e gráficos de evolução.',
     stack: ['React', 'Node.js', 'PostgreSQL', 'React Native', 'Expo'],
-    links: [{ label: 'Acessar App', icon: ExternalLink, href: 'https://controledeapostas.com.br' }],
+    links: [{ label: 'Abrir App', icon: ExternalLink, href: 'https://controledeapostas.com.br' }],
   },
   {
     id: 'financas',
@@ -77,7 +77,7 @@ const projetos = [
     tipo: 'Sistema Web + App Android',
     desc: 'Controle financeiro self-hosted com lançamentos, importação de extratos (OFX/PDF), recorrentes, automações, dashboard e app Android.',
     stack: ['React', 'Node.js', 'PostgreSQL', 'React Native', 'Expo'],
-    links: [{ label: 'Abrir Web App', icon: ExternalLink, href: 'https://financas.brainstech.com.br' }],
+    links: [{ label: 'Abrir App', icon: ExternalLink, href: 'https://financas.brainstech.com.br' }],
   },
   {
     id: 'excaliburr',
