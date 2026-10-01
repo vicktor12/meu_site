@@ -64,7 +64,7 @@ A seção é um **carrossel** (scroll-snap horizontal, setas, barra de progresso
 
 **Projetos atuais (8):**
 - Profissional: **Base de Conhecimento** (em andamento), **Bot Pauma**, **UTalk Analytics** — todos internos, sem link público
-- Pessoal: **Browser MCP Server** → `https://github.com/vicktor12/browser-mcp-server`, **Controle de Apostas** → `https://controledeapostas.com.br`, **Finanças Pessoais** → `https://financas.brainstech.com.br`, **Excaliburr** → `https://app.excaliburr.brainstech.com.br`, **My Health** (sem link público)
+- Pessoal: **Browser MCP Server** → `https://github.com/vicktor12/browser-mcp-server`, **Controle de Apostas** → `https://controledeapostas.com.br`, **Finanças Pessoais** → `https://financas.brainstech.com.br`, **Excaliburr** → `https://app.excaliburr.brainstech.com.br`, **My Health** → `https://saude.brainstech.com.br`
 - Não incluir dados de empresa/credenciais dos projetos profissionais nas descrições.
 
 ## Pendências

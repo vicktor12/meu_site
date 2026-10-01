@@ -102,7 +102,7 @@ const projetos = [
     tipo: 'Sistema Web',
     desc: 'Acompanhamento de saúde da família: medições, medicamentos, gráficos e relatórios para vários pacientes, com login multiusuário.',
     stack: ['React', 'Node.js', 'PostgreSQL', 'Recharts'],
-    links: [],
+    links: [{ label: 'Abrir App', icon: ExternalLink, href: 'https://saude.brainstech.com.br' }],
   },
 ]
 
