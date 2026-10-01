@@ -120,7 +120,7 @@ function ProjetoCard({ projeto }) {
   const { icon: Icon, hue, categoria, andamento, live, nome, tipo, desc, stack, links } = projeto
   const dot = andamento ? '#FFB547' : live ? '#34d399' : `rgb(${hue})`
   return (
-    <Spot className="group flex h-full w-[84vw] max-w-[380px] shrink-0 snap-start flex-col sm:w-[380px]">
+    <Spot className="group flex w-[84vw] max-w-[380px] shrink-0 snap-start flex-col sm:w-[380px]">
       <div className="relative border-b border-white/10 p-6" style={{ background: `linear-gradient(135deg, rgba(${hue},0.16), transparent 70%)` }}>
         <div className="flex items-start justify-between gap-3">
           <span className="flex h-12 w-12 items-center justify-center rounded-2xl border bg-black/30 transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110" style={{ borderColor: `rgba(${hue},0.4)` }}>
