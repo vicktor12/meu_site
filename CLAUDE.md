@@ -60,11 +60,12 @@ Array em `src/sections/Projetos.jsx`. Para adicionar novo projeto, inserir objet
 }
 ```
 
-**Projetos atuais:**
-- **Finanças Pessoais** (destaque, 2 colunas) → `https://financas.brainstech.com.br`
-- **Dashboard Umbler** → interno, sem link público
-- **Controle de Apostas** (destaque, 2 colunas) → `https://controledeapostas.com.br`
-- **Waze para ETS2** → mod pessoal, sem link público
+A seção é um **carrossel** (scroll-snap horizontal, setas, barra de progresso) com filtro por categoria. Cada projeto tem `categoria: 'Profissional' | 'Pessoal'` e `andamento: true|false` (Em andamento / Finalizado); `destaque`, `status` e `tipo` do formato antigo não existem mais (o `tipo` continua). Links usam o mesmo botão `.btn-solid` (sem campo `primary`).
+
+**Projetos atuais (8):**
+- Profissional: **Base de Conhecimento** (em andamento), **Bot Pauma**, **UTalk Analytics** — todos internos, sem link público
+- Pessoal: **Browser MCP Server** → `https://github.com/vicktor12/browser-mcp-server`, **Controle de Apostas** → `https://controledeapostas.com.br`, **Finanças Pessoais** → `https://financas.brainstech.com.br`, **Excaliburr** → `https://app.excaliburr.brainstech.com.br`, **My Health** (sem link público)
+- Não incluir dados de empresa/credenciais dos projetos profissionais nas descrições.
 
 ## Pendências
 
